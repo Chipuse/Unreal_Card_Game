@@ -23,11 +23,21 @@ private:
 	int BaseHealth;
 	FString BaseTypes;
 public:
-	FString GetCardID();
-	FString GetBaseName();
-	int GetBaseCost();
-	FString GetBaseColor();
-	int GetBaseAttack();
-	int GetBaseHealth();
-	FString GetBaseTypes();
+	UCPP_BaseCard();
+	UFUNCTION(BlueprintCallable)
+		void InitializeBaseCardFromData(FString InitCardId, FString InitBaseName, int InitBaseCost, FString InitBaseColor, int InitBaseAttack, int InitBaseHealth, FString InitBaseTypes);
+	UFUNCTION(BlueprintCallable)
+		FString GetCardID();
+	UFUNCTION(BlueprintCallable)
+		FString GetBaseName();
+	UFUNCTION(BlueprintCallable)
+		int GetBaseCost();
+	UFUNCTION(BlueprintCallable)
+		FString GetBaseColor();
+	UFUNCTION(BlueprintCallable)
+		int GetBaseAttack();
+	UFUNCTION(BlueprintCallable)
+		int GetBaseHealth();
+	UFUNCTION(BlueprintCallable)
+		FString GetBaseTypes();
 };
